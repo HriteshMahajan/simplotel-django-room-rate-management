@@ -1,0 +1,17 @@
+<!-- hotel/templates/hotel/room_rate_form.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Room Rate Form</title>
+</head>
+<body>
+    <h1>Room Rate Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'room_rate_list' %}">Cancel</a>
+</body>
+</html>

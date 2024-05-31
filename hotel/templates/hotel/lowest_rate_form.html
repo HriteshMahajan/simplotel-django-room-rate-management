@@ -1,0 +1,16 @@
+<!-- hotel/templates/hotel/lowest_rate_form.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lowest Rate Form</title>
+</head>
+<body>
+    <h1>Find Lowest Rate</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+</html>

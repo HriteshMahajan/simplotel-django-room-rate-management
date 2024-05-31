@@ -1,0 +1,17 @@
+<!-- hotel/templates/hotel/discount_form.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discount Form</title>
+</head>
+<body>
+    <h1>Discount Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'discount_list' %}">Cancel</a>
+</body>
+</html>

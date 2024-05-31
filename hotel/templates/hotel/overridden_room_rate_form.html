@@ -1,0 +1,17 @@
+<!-- hotel/templates/hotel/overridden_room_rate_form.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overridden Room Rate Form</title>
+</head>
+<body>
+    <h1>Overridden Room Rate Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'overridden_room_rate_list' %}">Cancel</a>
+</body>
+</html>

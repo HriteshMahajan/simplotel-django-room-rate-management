@@ -1,0 +1,17 @@
+<!-- hotel/templates/hotel/overridden_room_rate_confirm_delete.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Delete</title>
+</head>
+<body>
+    <h1>Confirm Delete</h1>
+    <p>Are you sure you want to delete this overridden room rate?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm</button>
+    </form>
+    <a href="{% url 'overridden_room_rate_list' %}">Cancel</a>
+</body>
+</html>

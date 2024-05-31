@@ -1,0 +1,20 @@
+<!-- hotel/templates/hotel/overridden_room_rate_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overridden Room Rates</title>
+</head>
+<body>
+    <h1>Overridden Room Rates</h1>
+    <a href="{% url 'overridden_room_rate_create' %}">Add New Overridden Room Rate</a>
+    <ul>
+        {% for rate in overridden_rates %}
+        <li>{{ rate.room_rate.room_name }}: {{ rate.overridden_rate }} on {{ rate.stay_date }}
+            <a href="{% url 'overridden_room_rate_update' rate.pk %}">Edit</a>
+            <a href="{% url 'overridden_room_rate_delete' rate.pk %}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

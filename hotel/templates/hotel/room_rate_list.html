@@ -1,0 +1,20 @@
+<!-- hotel/templates/hotel/room_rate_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Room Rates</title>
+</head>
+<body>
+    <h1>Room Rates</h1>
+    <a href="{% url 'room_rate_create' %}">Add New Room Rate</a>
+    <ul>
+        {% for rate in room_rates %}
+        <li>{{ rate.room_name }}: {{ rate.default_rate }}
+            <a href="{% url 'room_rate_update' rate.pk %}">Edit</a>
+            <a href="{% url 'room_rate_delete' rate.pk %}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
